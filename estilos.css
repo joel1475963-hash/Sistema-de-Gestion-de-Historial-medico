@@ -1,3 +1,4 @@
+/*Estilos principales*/
 * {
     margin: 0;
     padding: 0;
@@ -37,20 +38,7 @@ body {
     border: none;
     border-radius: 8px;
     margin: 5px;
-    text-decoration: none; /* Quita el subrayado del enlace */
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-.button2{
-    background-color: #a0a0a0;
-    color: #000000;
-    padding: 25px 25px;
-    font-size: 15px;
-    font-weight: 600; 
-    border: none;
-    border-radius: 8px;
-    margin: 5px;
-    text-decoration: none; /* Quita el subrayado del enlace */
+    text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
