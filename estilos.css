@@ -1,52 +1,75 @@
-/*Estos estilos hiban a ser presentados pero como dijo que no se puede presentar todavia la pagina principal
-con estilos lo deje porsiacaso en la siguuiente clase nos pide con estilos,
-por lo que el index.html principal no tiene estilos*/
-/*Estilos principales*/
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
-
+header{
+    background-color: #0f172a;
+    border-radius: 0 0 10px 10px;
+}
 body {
-    background-color: rgb(209, 209, 209);
+    background-color: #ececec;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #334155;
 }
 .contenedor-principal {
     flex: 1;
-    padding: 20px;
 }
 
-.titulo{
-    color: red;
+/* Títulos principales */
+.titulo {
+    color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 35px;
+    font-size: 32px;
+    font-weight: 700;
 }
 
-.separador-div {
-    display: flex;
-    justify-content: center;
+/* Títulos secundarios */
+.titulo2 {
+    color: #0a557a;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.titulo3{
+    color: #0a4985;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.letras {
+    color: #1e293b;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.letras2 {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .boton1 {
-    background-color: #a0a0a0;
-    color: #000000;
-    padding: 25px 25px;
-    font-size: 15px;
+    background-color: #0284c7;
+    color: #ffffff;            
+    padding: 14px 28px;
+    font-size: 16px;
     font-weight: 600; 
     border: none;
     border-radius: 8px;
-    margin: 5px;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    display: inline-block;
+    box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2);
+    transition: all 0.2s ease;
 }
+
 .boton1:hover {
-    background-color: #888888;
+    background-color: #0369a1;
+    transform: translateY(-2px);
 }
 
 .pie-pagina {
@@ -56,19 +79,4 @@ body {
     padding: 15px 20px;
     font-size: 0.9rem;
     border-top: 1px solid #1e293b;
-}
-
-/* Para las letras o titulos secundarios*/
-
-.titulo2{
-    color: red;
-    font-size: 25px;
-}
-.letras{
-    color: rgb(4, 93, 226);
-    font-size: 20px;
-}
-.letras2{
-    color: rgb(4, 93, 226);
-    font-size: 18px;
 }
