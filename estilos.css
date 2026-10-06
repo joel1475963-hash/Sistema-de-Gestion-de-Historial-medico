@@ -16,8 +16,17 @@ body {
 .contenedor-principal {
     flex: 1;
 }
+article {
+    margin-top: 15px;
+    max-width: 400px;
+    min-height: 100px;
+    height: auto;
+    border: 2px solid #0a2049;
+    border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+}
 
-/* Títulos principales */
 .titulo {
     color: #ffffff;
     text-align: center;
@@ -26,7 +35,6 @@ body {
     font-weight: 700;
 }
 
-/* Títulos secundarios */
 .titulo2 {
     color: #0a557a;
     font-size: 22px;
@@ -36,7 +44,6 @@ body {
 .titulo3{
     color: #0a4985;
     font-size: 20px;
-    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -47,7 +54,7 @@ body {
 }
 
 .letras2 {
-    color: #64748b;
+    color: #383b3f;
     font-size: 15px;
     line-height: 1.5;
 }
