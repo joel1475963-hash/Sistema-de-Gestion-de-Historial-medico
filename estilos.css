@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 header{
     background-color: #0f172a;
@@ -16,15 +17,59 @@ body {
 .contenedor-principal {
     flex: 1;
 }
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 20px auto;
+}
 article {
-    margin-top: 15px;
+    width: 100%;
     max-width: 400px;
+    box-sizing: border-box;
     min-height: 100px;
     height: auto;
     border: 2px solid #0a2049;
     border-radius: 15px;
     background-color: white;
-    padding: 20px;
+    padding: 15px 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #0a2049;
+    border-radius: 15px;
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    flex-wrap: wrap;
+    padding:  15px;
+    margin: 20px auto;
+    gap: 6px;
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo label {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.campo input, 
+.campo textarea{
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .titulo {
@@ -60,25 +105,15 @@ article {
 }
 
 .boton1 {
-    background-color: #0284c7;
-    color: #ffffff;            
-    padding: 14px 28px;
+    background-color: #aaacad;
+    color: #022668;
+    padding: 15px 20px;
     font-size: 16px;
     font-weight: 600; 
     border: none;
     border-radius: 8px;
-    text-decoration: none;
-    cursor: pointer;
     display: inline-block;
-    box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2);
-    transition: all 0.2s ease;
 }
-
-.boton1:hover {
-    background-color: #0369a1;
-    transform: translateY(-2px);
-}
-
 .pie-pagina {
     background-color: #0f172a;
     color: #94a3b8;
