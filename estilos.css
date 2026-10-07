@@ -28,7 +28,6 @@ body {
 }
 article {
     width: 100%;
-    max-width: 400px;
     box-sizing: border-box;
     min-height: 100px;
     height: auto;
@@ -37,6 +36,7 @@ article {
     background-color: white;
     padding: 15px 20px;
 }
+
 form{
     display: flex;
     flex-direction: column;
@@ -121,4 +121,18 @@ form{
     padding: 15px 20px;
     font-size: 0.9rem;
     border-top: 1px solid #1e293b;
+}
+
+@media (min-width: 768px) {
+    
+    .contenedor-tarjetas {
+        gap: 25px;
+        padding: 0;
+    }
+
+    article {
+        max-width: 400px;
+        flex: 1;
+    }
+
 }
