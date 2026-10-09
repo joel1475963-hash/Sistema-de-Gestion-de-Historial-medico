@@ -7,10 +7,25 @@
     <title>Sistema de Gestión de Historial Medico</title>
 </head>
 <body>
-    <header>
+    <header id="inicio">
         <h1 class="titulo">Sistema web de Gestion de historial Medico</h1>
     </header>
-    <main class="contenedor-principal">
+    <div class="divcentrado">
+        <button id="btnModo" class="btn-modo">Modo Noche</button>
+    </div>
+    <script src="app.js"></script>
+    <nav>
+            <h3 class="titulo-menu">Menu</h3>
+        <ul class="menu">
+            <div class="enlase-estilo">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proposito">Proposito</a></li>
+            <li><a href="#reserva">Reservar ficha</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            </div>
+        </ul>
+    </nav>
+    <main class="contenedor-principal" id="proposito">
         <section>
             <p class="letras">
                 Plataforma centralizada para la administración de historiales clínicos, 
@@ -37,7 +52,7 @@
                     </ul>
                 </article>
             </div>
-            <form action="" class="formulario-reserva">
+            <form action="" class="formulario-reserva" id="reserva">
                 <h3 class="titulo3">Necesitas atencion medica realiza tu reserva</h3>
             <div class="campo">
                 <label for="ci">Cedula de identidad</label>
@@ -58,7 +73,7 @@
         </section>
         
     </main>
-    <footer class="pie-pagina">
+    <footer class="pie-pagina" id="contacto">
         <p><strong>Correo Electronico:</strong> joel.huancal@uab.edu.bo</p>
         <p>&copy; Joel Huanca Laura. Todos los derechos reservados.</p>
     </footer>
