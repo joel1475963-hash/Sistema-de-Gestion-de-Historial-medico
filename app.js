@@ -1,26 +1,37 @@
-const btnModo = document.getElementById('btnModo');
+//Para cambiar el ambiente de la pag
+const btnModo = document.querySelector('#btnModo');
 
-btnModo.addEventListener('click', () => {
-    document.body.classList.toggle('modo-noche');
-    
-    if (document.body.classList.contains('modo-noche')) {
-        btnModo.textContent = 'Modo Día';
+btnModo.addEventListener('click', cambiarModo);
+function cambiarModo() {
+    const datos = document.body.classList.toggle('modo-noche');
+    const letras = document.querySelectorAll(".letras, .letras2, article, form, label");
+    for (let i = 0; i < letras.length; i++) {
+        letras[i].classList.toggle('modo-noche');
+    }
+    console.clear();
+    if (datos) {
+        btnModo.textContent = 'Modo Dia';
+        console.log("Cambiando a Noche");
     } else {
         btnModo.textContent = 'Modo Noche';
+        console.log("Cambiando a Dia");
     }
-});
+}
+//para el menu amburgesa
+const botonMenu = document.querySelector("#btnMenu");
+const menu = document.querySelector("#menuPrincipal");
 
+botonMenu.addEventListener("click", alternarMenu);
 
+function alternarMenu() {
+    const menuAbierto = menu.classList.toggle("menu-abierto");
 
-const btnMenu = document.getElementById("btnMenu");
-const menu = document.getElementById("menuPrincipal");
-
-btnMenu.addEventListener("click", function () {
-    if (menu.style.display === "none") {
-        menu.style.display = "block";
-        btnMenu.textContent = "Ocultar menú";
+    botonMenu.textContent = menuAbierto ? "✕" : "☰";
+    console.clear();
+    if (menuAbierto) {
+        console.log("Abrir menu");
     } else {
-        menu.style.display = "none";
-        btnMenu.textContent = "Mostrar menú";
+        console.log("Cerrar menu");
     }
-});
+    
+}
