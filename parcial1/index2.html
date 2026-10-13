@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo2.css">
+    <title>Lavanderia Burbujas</title>
+</head>
+<body>
+    <header id="inicio" class="header">
+        <h1 class="titulo1">Lavanderia Burbujas</h1>
+
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#lavados">Nuestros lavados</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lavados" class="seccion">
+            <h2 class="titulo2">Nuestros lavados</h2>
+            <p>En Lavanderia Burbujas cuidamos tu ropa y la dejamos limpia y fresca.</p>
+
+            <ul>
+                <li>Lavado por kilo - Bs 15</li>
+                <li>Planchado de camisa - Bs 8</li>
+                <li>Lavado de edredon - Bs 35</li>
+            </ul>
+        </section>
+        <div class="divseparador">
+        <section id="contacto" class="seccion">
+            <h2 class="titulo2">Deja tu encargo</h2>
+            
+            <form class="formulario">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="correo">Correo electronico:</label>
+                <input type="email" id="correo" required>
+
+                <label for="encargo">Tu encargo:</label>
+                <textarea id="encargo"></textarea>
+            </form>
+        
+            <button type="button" id="btn-confirmar" class="boton">Confirmar encargo</button>
+            <p id="mensaje" class="oculto"></p>
+        </section>
+    </div>
+    </main>
+
+    <footer class="footer">
+        Parcial 1 - Joel Huanca Laura - 12 de octubre de 2026
+    </footer>
+
+    <script src="app2.js"></script>
+</body>
+</html>
