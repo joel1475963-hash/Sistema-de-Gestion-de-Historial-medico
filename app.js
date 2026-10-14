@@ -53,7 +53,11 @@ if (cedula === "" || nombre === "" || comentario === "") {
     aviso.textContent = "Error llene todos los campos";
     aviso.classList.add("error");
     aviso.classList.remove("exito");
-} else {
+} else if(cedula.length<7){
+    aviso.textContent = "Error cedula tiene que tener 7 digitos";
+    aviso.classList.add("error");
+    aviso.classList.remove("exito");
+    }else {
     aviso.textContent = "Registro exitoso";
     aviso.classList.add("exito");
     aviso.classList.remove("error");
