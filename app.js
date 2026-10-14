@@ -35,3 +35,30 @@ function alternarMenu() {
     }
     
 }
+
+
+const formulario = document.querySelector("#reserva");
+const aviso = document.querySelector("#errorPedido");
+
+formulario.addEventListener("submit", validarDatos);
+
+function validarDatos(event) {
+const cedula = document.querySelector("#cedula").value;
+const nombre = document.querySelector("#nombreCompleto").value;
+const comentario = document.querySelector("#Comentario").value;
+
+event.preventDefault();
+
+if (cedula === "" || nombre === "" || comentario === "") {
+    aviso.textContent = "Error, llene todos los campos";
+    aviso.classList.add("error");
+    aviso.classList.remove("exito");
+} else {
+    aviso.textContent = "Registro exitoso";
+    aviso.classList.add("exito");
+    aviso.classList.remove("error");
+
+    console.log("Correcto");
+}
+
+}

@@ -60,23 +60,30 @@
                     </ul>
                 </article>
             </div>
-            <form action="" class="formulario-reserva" id="reserva">
+            <form action="" class="formulario-reserva" id="reserva" novalidate>
                 <h3 class="titulo3">Necesitas atencion medica realiza tu reserva</h3>
+            
             <div class="campo">
-                <label for="ci">Cedula de identidad</label>
-                <input type="number" required>
+                <label for="cedula">Cedula de identidad</label>
+                <input type="number" id="cedula" required>
             </div>
+            
             <div class="campo">
-                <label for="nombre completo">Nombre Completo</label>
-                <input type="text" required>
+                <label for="nombreCompleto">Nombre Completo</label>
+                <input type="text" id="nombreCompleto" required>
             </div>
+            
             <div class="campo">
-                <label for="comentario">Comentario</label>
-                <input type="text" required>
+                <label for="Comentario">Comentario</label>
+                <input type="text" id="Comentario" required>
             </div>
+            
             <div class="campo">
-                <button type="submit" class="boton1">Enviar</button>
+                <button type="submit" class="boton1" id="botonform">Enviar</button>
             </div>
+            
+            <p id="errorPedido" class="aviso"></p>
+            
             </form>
         </section>
         

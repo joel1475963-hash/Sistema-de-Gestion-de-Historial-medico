@@ -194,6 +194,19 @@ label {
     font-size: 0.9rem;
     border-top: 1px solid #1e293b;
 }
+.aviso{
+    display: none;
+}
+.aviso.error{
+    display: flex;
+    color: red;
+    display: contents;
+    justify-content: center;
+}
+.aviso.exito{
+    color: green;
+    display: contents;
+}
 
 @media (min-width: 768px) {
     
