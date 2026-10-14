@@ -48,21 +48,33 @@ const nombre = document.querySelector("#nombreCompleto").value;
 const comentario = document.querySelector("#Comentario").value;
 
 event.preventDefault();
-
-if (cedula === "" || nombre === "" || comentario === "") {
-    aviso.textContent = "Error llene todos los campos";
+console.clear();
+if (cedula === "") {
+    aviso.textContent = "Error porfavor llene Cedula de identidad";
     aviso.classList.add("error");
     aviso.classList.remove("exito");
-} else if(cedula.length<7){
-    aviso.textContent = "Error cedula tiene que tener 7 digitos";
+    }else if (cedula.length<7) {
+        aviso.textContent= "Error el campo Cedula de identidad tiene que tener 7 digitos"
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
+    }else if(cedula.length>=8){
+        aviso.textContent="Error el campo Cedula de identidad no puede ser mayor a 7 digitos";
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
+    }
+    else if(nombre=== ""){
+    aviso.textContent= "Error porfavor llene el campo nombre completo";
     aviso.classList.add("error");
     aviso.classList.remove("exito");
-    }else {
-    aviso.textContent = "Registro exitoso";
+    }else if(comentario===""){
+    aviso.textContent = "Error porfavor realize un comentario";
+    aviso.classList.add("error");
+    aviso.classList.remove("exito");
+    }else{
+        aviso.textContent = "Reserva registrada";
     aviso.classList.add("exito");
     aviso.classList.remove("error");
-
-    console.log("Correcto");
-}
+    console.log("Reserva registrada");
+    }
 
 }
