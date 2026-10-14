@@ -50,7 +50,7 @@ const comentario = document.querySelector("#Comentario").value;
 event.preventDefault();
 
 if (cedula === "" || nombre === "" || comentario === "") {
-    aviso.textContent = "Error, llene todos los campos";
+    aviso.textContent = "Error llene todos los campos";
     aviso.classList.add("error");
     aviso.classList.remove("exito");
 } else {

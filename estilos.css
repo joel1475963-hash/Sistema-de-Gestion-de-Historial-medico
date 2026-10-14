@@ -196,16 +196,15 @@ label {
 }
 .aviso{
     display: none;
+    text-align: center;
 }
 .aviso.error{
-    display: flex;
+    display: block;
     color: red;
-    display: contents;
-    justify-content: center;
 }
 .aviso.exito{
+    display: block;
     color: green;
-    display: contents;
 }
 
 @media (min-width: 768px) {
