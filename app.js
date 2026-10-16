@@ -58,7 +58,7 @@ if (cedula === "") {
         aviso.classList.add("error");
         aviso.classList.remove("exito");
     }else if(cedula.length>8){
-        aviso.textContent="Error el campo Cedula de identidad no puede ser mayor a 9 digitos";
+        aviso.textContent="Error el campo Cedula de identidad no puede ser mayor a 8 digitos";
         aviso.classList.add("error");
         aviso.classList.remove("exito");
     }
