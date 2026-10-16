@@ -50,15 +50,15 @@ const comentario = document.querySelector("#Comentario").value;
 event.preventDefault();
 console.clear();
 if (cedula === "") {
-    aviso.textContent = "Error porfavor llene Cedula de identidad";
+    aviso.textContent = "Error porfavor llene el campo Cedula de identidad";
     aviso.classList.add("error");
     aviso.classList.remove("exito");
     }else if (cedula.length<7) {
         aviso.textContent= "Error el campo Cedula de identidad tiene que tener 7 digitos"
         aviso.classList.add("error");
         aviso.classList.remove("exito");
-    }else if(cedula.length>=8){
-        aviso.textContent="Error el campo Cedula de identidad no puede ser mayor a 7 digitos";
+    }else if(cedula.length>8){
+        aviso.textContent="Error el campo Cedula de identidad no puede ser mayor a 9 digitos";
         aviso.classList.add("error");
         aviso.classList.remove("exito");
     }
@@ -67,7 +67,7 @@ if (cedula === "") {
     aviso.classList.add("error");
     aviso.classList.remove("exito");
     }else if(comentario===""){
-    aviso.textContent = "Error porfavor realize un comentario";
+    aviso.textContent = "Error porfavor realize un comentario corto de su salud";
     aviso.classList.add("error");
     aviso.classList.remove("exito");
     }else{
