@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Sistema de Gestión de Historial Medico</title>
+</head>
+<body>
+    <header id="inicio">
+        <h1 class="titulo">Sistema web de Gestion de historial Medico</h1>
+    </header>
+    <div class="div-centrado">
+        <button id="btnModo" class="btn-modo">Modo Noche</button>
+    </div>
+    <nav class="navbar">
+        <h3 class="titulo-menu">Menú</h3>
+    
+        <button
+            id="btnMenu"
+            type="button"
+            class="btn-hamburguesa"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+    
+        <ul class="menu" id="menuPrincipal">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proposito">Propósito</a></li>
+            <li><a href="#reserva">Reservar ficha</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <main class="contenedor-principal" id="proposito">
+        <section>
+            <p class="letras">
+                Plataforma centralizada para la administración de historiales clínicos, 
+                medicos, recetas y seguimiento del paciente.
+            </p>
+        </section>
+        <section>
+            <h2 class="titulo2">¿Que ofrece la plataforma web?</h2>
+            <div class="contenedor-tarjetas">
+                <article>
+                    <h3 class="titulo3">Para el Personal Medico</h3>
+                    <ul class="letras2">
+                        <li>Registro y actualización de historiales clinicos.</li>
+                        <li>Generacion y emisión de recetas digitales.</li>
+                        <li>Consulta centralizada de antecedentes de pacientes.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3 class="titulo3">Para los Pacientes</h3>
+                    <ul class="letras2">
+                        <li>Acceso seguro a recetas e indicaciones de salud.</li>
+                        <li>Consulta de historial de atención médica.</li>
+                    </ul>
+                </article>
+            </div>
+            <form action="procesar.php" class="formulario-reserva" id="reserva" method="post" novalidate>
+                <h3 class="titulo3">Necesitas atencion medica realiza tu reserva</h3>
+            <div class="campo">
+                <label for="ci">Cedula de identidad</label>
+                <input type="number" id="cedula" name="ci" required>
+            </div>
+            <div class="campo">
+                <label for="nombre completo">Nombre Completo</label>
+                <input type="text" id="nombreCompleto" name="nombre" required>
+            </div>
+            <div class="campo">
+                <label for="comentario">Comentario</label>
+                <input type="text" id="Comentario" name="comentario" required>
+            </div>
+            <div class="campo">
+                <button type="submit" class="boton1" id="botonform">Enviar</button>
+            </div>
+            <p id="errorPedido" class="aviso">error</p>
+            </form>
+        </section>
+        
+    </main>
+    <p>Visitas: <span id="contadorVisitas">Cargando...</span></p>
+    <footer class="pie-pagina" id="contacto">
+        <p><strong>Correo Electronico:</strong> joel.huancal@uab.edu.bo</p>
+        <p>&copy; Joel Huanca Laura. Todos los derechos reservados.</p>
+    </footer>
+    <script src="conexiones/conexion.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
