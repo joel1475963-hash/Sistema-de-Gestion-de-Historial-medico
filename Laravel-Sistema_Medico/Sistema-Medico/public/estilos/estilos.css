@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: #0f172a;
+    border-radius: 0 0 10px 10px;
+}
+body {
+    background-color: #ececec;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #334155;
+}
+/*Modo noche desde aqui*/
+body.modo-noche {
+    background-color: #0f172a;
+    color: white;
+}
+.letras.modo-noche{
+    color: orange;
+}
+.letras2.modo-noche{
+    color: orange;
+}
+article.modo-noche{
+    background-color: #08203f;
+}
+form.modo-noche{
+    background-color: #08203f;
+}
+label.modo-noche{
+    color: orange;
+}
+/*Estilos de titulo contenedores formularios etc*/
+.contenedor-principal {
+    flex: 1;
+}
+.div-centrado{
+    text-align: center;
+    align-content: center;
+}
+.navbar {
+    background-color: #17365D;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #80cbc4;
+}
+
+.btn-hamburguesa {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.titulo-menu{
+    text-align: center;
+    color: #ffffff;
+}
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 20px auto;
+}
+article {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100px;
+    height: auto;
+    border: 2px solid #0a2049;
+    border-radius: 15px;
+    background-color: white;
+    padding: 15px 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #0a2049;
+    border-radius: 15px;
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    flex-wrap: wrap;
+    padding:  15px;
+    margin: 20px auto;
+    gap: 6px;
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.campo input, 
+.campo textarea{
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.titulo {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.titulo2 {
+    color: #0a557a;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.titulo3{
+    color: #0a4985;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.letras {
+    color: #1e293b;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.letras2 {
+    color: #383b3f;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.boton1 {
+    background-color: #aaacad;
+    color: #022668;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600; 
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+}
+.btn-modo{
+    background-color: #aaacad;
+    color: #022668;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600; 
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+}
+.pie-pagina {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
+}
+.aviso{
+    display: none;
+    text-align: center;
+}
+.aviso.error{
+    display: block;
+    color: red;
+}
+.aviso.exito{
+    display: block;
+    color: green;
+}
+
+@media (min-width: 768px) {
+    
+    .contenedor-tarjetas {
+        gap: 25px;
+        padding: 0;
+    }
+
+    article {
+        max-width: 400px;
+        flex: 1;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .btn-hamburguesa {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding-top: 10px;
+    }
+
+    .menu.menu-abierto {
+        display: flex;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 12px 0;
+    }
+}
