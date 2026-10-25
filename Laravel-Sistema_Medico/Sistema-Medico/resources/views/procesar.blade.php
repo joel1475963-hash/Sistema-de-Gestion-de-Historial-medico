@@ -1,9 +1,14 @@
 @include('layouts.header')
-<h2>Datos del paciente</h2>
+<main class="contenedor-principal">
+    <h2>Datos del paciente</h2>
 
-<p>Cedula: {{ $paciente->ci }}</p>
-<p>Nombre: {{ $paciente->nombre }}</p>
-<p>Comentario: {{ $paciente->comentario }}</p>
+    <p>Cedula: {{ $paciente->ci }}</p>
+    <p>Nombre: {{ $paciente->nombre }}</p>
+    <p>Comentario: {{ $paciente->comentario }}</p>
 
-<a href="{{ url('/') }}">Volver al inicio</a>
+    <h3>Pacientes registrados</h3>
+    <p>{{ $cantidadPacientes }} de 10 pacientes</p>
+
+    <a href="{{ url('/inicio') }}">Volver al inicio</a>
+</main>
 @include('layouts.footer')

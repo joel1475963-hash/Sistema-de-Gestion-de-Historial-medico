@@ -27,10 +27,12 @@
         </button>
     
         <ul class="menu" id="menuPrincipal">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#proposito">Propósito</a></li>
-            <li><a href="#reserva">Reservar ficha</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="{{ asset('inicio') }}#inicio">Inicio</a></li>
+            <li><a href="{{ asset('inicio') }}#proposito">Propósito</a></li>
+            <li><a href="{{ asset('inicio') }}#reserva">Reservar ficha</a></li>
+            <li><a href="{{ asset('inicio') }}#contacto">Contacto</a></li>
+            <li><a href="{{ url('/cantidad-pacientes') }}">Pacientes registrados</a></li>
+            <li><a href="{{ url('/login') }}">Iniciar sesion</a></li>
         </ul>
     </nav>
 

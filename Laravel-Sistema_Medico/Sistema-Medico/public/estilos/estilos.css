@@ -206,6 +206,10 @@ label {
     display: block;
     color: green;
 }
+.error-dato{
+    display: block;
+    color: red;
+}
 
 @media (min-width: 768px) {
     

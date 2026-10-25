@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PacienteController;
+use App\Models\Paciente;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +29,11 @@ Route::get('hola', function () {
 
 Route::post('/pacientes', [PacienteController::class, 'guardar'])
     ->name('pacientes.guardar');
+
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/cantidad-pacientes', function () {
+    $cantidadPacientes = Paciente::count();
+    return view('cantidad-pacientes', compact('cantidadPacientes'));
+});

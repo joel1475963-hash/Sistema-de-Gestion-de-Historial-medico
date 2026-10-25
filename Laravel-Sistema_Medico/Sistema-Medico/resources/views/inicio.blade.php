@@ -1,4 +1,4 @@
-@include('layouts.header');
+@include('layouts.header')
 <main class="contenedor-principal" id="proposito">
         <section>
             <p class="letras">
@@ -44,6 +44,9 @@
             <div class="campo">
                 <button type="submit" class="boton1" id="botonform">Enviar</button>
             </div>
+            @if (session('error'))
+            <p class="aviso">{{ session('error') }}</p>
+            @endif
             <p id="errorPedido" class="aviso">error</p>
             </form>
         </section>
