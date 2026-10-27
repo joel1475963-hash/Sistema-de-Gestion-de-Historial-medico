@@ -9,6 +9,6 @@
     <h3>Pacientes registrados</h3>
     <p>{{ $cantidadPacientes }} de 10 pacientes</p>
 
-    <a href="{{ url('/inicio') }}">Volver al inicio</a>
+    <a class="boton1" href="{{ url('/inicio') }}">Volver al inicio</a>
 </main>
 @include('layouts.footer')

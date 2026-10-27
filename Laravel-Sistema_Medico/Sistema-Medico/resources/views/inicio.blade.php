@@ -45,7 +45,7 @@
                 <button type="submit" class="boton1" id="botonform">Enviar</button>
             </div>
             @if (session('error'))
-            <p class="aviso">{{ session('error') }}</p>
+            <p class="error-dato">{{ session('error') }}</p>
             @endif
             <p id="errorPedido" class="aviso">error</p>
             </form>

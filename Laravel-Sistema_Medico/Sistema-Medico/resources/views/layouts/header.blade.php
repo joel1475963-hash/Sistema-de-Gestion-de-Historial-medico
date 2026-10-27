@@ -32,7 +32,19 @@
             <li><a href="{{ asset('inicio') }}#reserva">Reservar ficha</a></li>
             <li><a href="{{ asset('inicio') }}#contacto">Contacto</a></li>
             <li><a href="{{ url('/cantidad-pacientes') }}">Pacientes registrados</a></li>
-            <li><a href="{{ url('/login') }}">Iniciar sesion</a></li>
+            @if (session()->has('usuario_id'))
+            <li><a href="{{ url('/visualizar-usuario') }}">Ver pacientes</a></li>
+                <li>
+                    <form action="{{ url('/cerrar-sesion') }}" method="POST">
+                        @csrf
+                        <button class="enlace-menu" type="submit">Cerrar sesion</button>
+                    </form>
+                </li>
+            @else
+                <li>
+                    <a href="{{ url('/login') }}">Iniciar sesion</a>
+                </li>
+            @endif
         </ul>
     </nav>
 

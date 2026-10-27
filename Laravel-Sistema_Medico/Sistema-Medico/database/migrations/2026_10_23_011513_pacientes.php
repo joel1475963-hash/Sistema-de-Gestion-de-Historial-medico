@@ -14,8 +14,8 @@ class Pacientes extends Migration
     public function up()
     {
         Schema::create('pacientes', function (Blueprint $table) {
-            $table->id();
-            $table->string('ci');
+            $table->id('idPaciente');
+            $table->string('ciPaciente');
             $table->string('nombre');
             $table->text('comentario');
             $table->timestamps();

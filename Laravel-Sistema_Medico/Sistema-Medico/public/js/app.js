@@ -17,7 +17,7 @@ function cambiarModo() {
         console.log("Cambiando a Dia");
     }
 }
-//para el menu amburgesa
+//para el menu hamburgesa
 const botonMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menuPrincipal");
 
@@ -40,7 +40,10 @@ function alternarMenu() {
 const formulario = document.querySelector("#reserva");
 const aviso = document.querySelector("#errorPedido");
 
-formulario.addEventListener("submit", validarDatos);
+if (formulario) {
+    formulario.addEventListener("submit", validarDatos);
+}
+
 
 function validarDatos(event) {
 const cedula = document.querySelector("#cedula").value;
@@ -74,11 +77,29 @@ if (cedula === "") {
     aviso.textContent = "Error porfavor realize un comentario corto de su salud";
     aviso.classList.add("error");
     aviso.classList.remove("exito");
-    }else{
-        aviso.textContent = "Reserva registrada";
-    aviso.classList.add("exito");
-    aviso.classList.remove("error");
-    console.log("Reserva registrada");
     }
 
+
+}
+
+const formulario1 = document.querySelector("#formulario1");
+const aviso2 = document.querySelector("#errorPedido");
+
+if (formulario1) {
+    formulario1.addEventListener("submit", loginvalidar);
+}
+function loginvalidar(event){
+    const usuario=document.querySelector('#nombreUsu');
+    const contrasena=document.querySelector('#contrasena');
+    if (usuario.value=="") {
+        event.preventDefault();
+        aviso2.textContent="Error porfavor llene el campo nombre de usuario";
+        aviso2.classList.add("error");
+        aviso2.classList.remove("exito");
+    }else if (contrasena.value=="") {
+        event.preventDefault();
+        aviso2.textContent="Error porfavor llene el campo contraseña";
+        aviso2.classList.add("error");
+        aviso2.classList.remove("exito");
+    }
 }
