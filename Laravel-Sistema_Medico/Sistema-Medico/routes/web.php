@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\UsuarioController;
 use App\Models\Paciente;
+use App\Models\Torta;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,3 +65,32 @@ Route::get('/visualizar-paciente', function () {
 });
 //cerrar sesion
 Route::post('/cerrar-sesion', [UsuarioController::class, 'cerrarSesion']);
+
+//proyecto integradora rutas para no confundirme
+Route::get('/tortas', function () {
+    $tortas = Torta::all();
+    return view('tortas.index', compact('tortas'));
+});
+
+Route::get('/tortas/nuevo', function () {
+    return view('tortas.create');
+});
+
+Route::post('/tortas/nuevo', function () {
+    //se preguntara que hago aqui lo hice asi para hacerlo rapido y valida los campos sabor y precio
+    request()->validate([
+        'sabor' => 'required',
+        'precio' => 'required|integer',
+    ], [
+        'sabor.required' => 'Indica el sabor de la torta.',
+        'precio.required' => 'Indica el precio de la torta.',
+        'precio.integer' => 'El precio va en digitos, sin centavos.',
+    ]);
+
+    Torta::create([
+        'sabor' => request()->input('sabor'),
+        'precio' => request()->input('precio'),
+    ]);
+
+    return redirect('/tortas');
+});
