@@ -81,15 +81,18 @@ Route::post('/tortas/nuevo', function () {
     request()->validate([
         'sabor' => 'required',
         'precio' => 'required|integer',
+        'stock' => 'required|integer'
     ], [
         'sabor.required' => 'Indica el sabor de la torta.',
         'precio.required' => 'Indica el precio de la torta.',
         'precio.integer' => 'El precio va en digitos, sin centavos.',
+        'stock.integer' => 'El stock debe de ser un numero entero.'
     ]);
 
     Torta::create([
         'sabor' => request()->input('sabor'),
         'precio' => request()->input('precio'),
+        'stock' => request()->input('stock')
     ]);
 
     return redirect('/tortas');

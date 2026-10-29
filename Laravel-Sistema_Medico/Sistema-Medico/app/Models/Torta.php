@@ -9,5 +9,5 @@ class Torta extends Model
 {
     use HasFactory;
     protected $table = 'tortas';
-    protected $fillable = ['sabor', 'precio'];
+    protected $fillable = ['sabor', 'precio','stock'];
 }

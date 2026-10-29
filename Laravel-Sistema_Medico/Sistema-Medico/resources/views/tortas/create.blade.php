@@ -25,6 +25,10 @@
             <label for="precio">Precio en Bs:</label>
             <input type="number" id="precio" name="precio" value="{{ old('precio') }}">
         </div>
+        <div>
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" value="{{ old('stock') }}">
+        </div>
 
         <button type="submit">Registrar torta</button>
     </form>

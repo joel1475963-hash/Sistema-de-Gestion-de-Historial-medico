@@ -17,6 +17,7 @@ class CreateTortasTable extends Migration
             $table->id();
             $table->string('sabor');
             $table->integer('precio');
+            $table->integer('stock');
             $table->timestamps();
         });
     }
